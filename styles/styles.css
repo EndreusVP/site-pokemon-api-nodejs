@@ -7,11 +7,12 @@
  .container {
      display: flex;
      flex-direction: row;
-     align-items: flex-start;
+     height: 100vh;
  }
 
  .main {
-     background-image: url(images/fundo-main.png);
+    /* background-image: url(/buscando-api-pokemon/images/fundo-main.png);*/
+     background-size: cover;
      width: 90%;
      height: 100vh;
  }

@@ -1,0 +1,15 @@
+@media screen and (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        background-color: red; /* já testado */
+    }
+
+    .main, .selecionar {
+        width: 100%;
+        height: auto; /* deixa crescer de acordo com o conteúdo */
+    }
+
+    .selecionar {
+        gap: 10px; /* reduz o espaçamento no mobile */
+    }
+}
