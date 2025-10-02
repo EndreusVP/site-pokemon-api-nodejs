@@ -1,0 +1,25 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .container {
+     display: flex;
+     flex-direction: row;
+     align-items: flex-start;
+ }
+
+ .main {
+     background-image: url(images/fundo-main.png);
+     width: 90%;
+     height: 100vh;
+ }
+
+ .selecionar {
+     width: 10%;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     gap: 70px;
+ }
