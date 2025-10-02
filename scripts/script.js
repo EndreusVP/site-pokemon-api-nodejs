@@ -12,8 +12,10 @@ pikachu.addEventListener("click", function () {
     fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
         .then(res => res.json())
         .then(data => {
-            main.innerHTML += `<img src="${data.sprites.front_default}">`
-            main.innerHTML += `<p>Nome: ${data.name}</p>`
+            main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
+            const imagemPokemon = document.querySelector(".imagem-pokemon")
+            imagemPokemon.style = "width: 300px;"
+            imagemPokemon.style = "height: 400px;" 
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
         })
@@ -25,8 +27,10 @@ charmander.addEventListener("click", function () {
     fetch("https://pokeapi.co/api/v2/pokemon/charmander")
         .then(res => res.json())
         .then(data => {
-            main.innerHTML += `<img src="${data.sprites.front_default}">`
-            main.innerHTML += `<p>Nome: ${data.name}</p>`
+            main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
+            const imagemPokemon = document.querySelector(".imagem-pokemon")
+            imagemPokemon.style = "width: 300px;"
+            imagemPokemon.style = "height: 400px;" 
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
         })
@@ -38,7 +42,10 @@ bulbasaur.addEventListener("click", function () {
     fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
         .then(res => res.json())
         .then(data => {
-            main.innerHTML += `<img src="${data.sprites.front_default}">`
+            main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
+            const imagemPokemon = document.querySelector(".imagem-pokemon")
+            imagemPokemon.style = "width: 300px;"
+            imagemPokemon.style = "height: 400px;" 
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
@@ -51,7 +58,10 @@ snorlax.addEventListener("click", function () {
     fetch("https://pokeapi.co/api/v2/pokemon/snorlax")
         .then(res => res.json())
         .then(data => {
-            main.innerHTML += `<img src="${data.sprites.front_default}">`
+            main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
+            const imagemPokemon = document.querySelector(".imagem-pokemon")
+            imagemPokemon.style = "width: 300px;"
+            imagemPokemon.style = "height: 400px;" 
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
