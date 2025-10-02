@@ -7,34 +7,90 @@
     <title>Buscando api pokemon</title>
 </head>
 
+<style>
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
 <body>
 
-    <h1>Lista de Pokemons</h1>
+    <div class="cotainer">
+        <div class="main" id="main">
 
-    <button id="botao">Mostrar Lista</button>
+        </div>
+        <div class="selecionar">
+            <button id="pikachu">mostrar pikachu</button>
+            <button id="charmander">mostrar charmander</button>
+            <button id="bulbasaur">mostrar bulbasaur</button>
+            <button id="snorlax">mostrar snorlax</button>
+        </div>
+    </div>
 
-    <ul id="lista">
-
-    </ul>
 
     <script>
-        const botao = document.querySelector("#botao")
-        const lista = document.querySelector("#lista")
-        const pokemons = ["pikachu", "charmander", "bulbasaur", "snorlax"]
+        //botões
+        const pikachu = document.querySelector("#pikachu")
+        const charmander = document.querySelector("#charmander")
+        const bulbasaur = document.querySelector("#bulbasaur")
+        const snorlax = document.querySelector("#snorlax")
 
-        botao.addEventListener("click", function () {
-            lista.innerHTML = ""
-            for (let i = 0; i < pokemons.length; i++) {
-                fetch(`https://pokeapi.co/api/v2/pokemon/${pokemons[i]}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        lista.innerHTML += `<li>Nome: ${data.name} | Altura: ${data.height} | Peso: ${data.weight} |</li>`
-                        lista.innerHTML += `<img src="${data.sprites.front_default}">`
+        //variaveis
+        let main = document.querySelector("#main")
 
-                    })
-                    .catch(err => console.error("erro: ", err))
-            }
+        pikachu.addEventListener("click", function () {
+            main.innerHTML = ""
+           fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+           .then(res => res.json())
+           .then(data => {
+                main.innerHTML += `<img src="${data.sprites.front_default}">`
+                main.innerHTML += `<p>Nome: ${data.name}</p>`
+                main.innerHTML += `<p>Altura: ${data.height}m</p>`
+                main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+           })
+           .catch(err => console.error("ERRO:", err))
         })
+
+        charmander.addEventListener("click", function(){
+            main.innerHTML=""
+            fetch("https://pokeapi.co/api/v2/pokemon/charmander")
+            .then(res => res.json())
+            .then(data=>{
+                main.innerHTML += `<img src="${data.sprites.front_default}">`
+                main.innerHTML += `<p>Nome: ${data.name}</p>`
+                main.innerHTML += `<p>Altura: ${data.height}m</p>`
+                main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            })
+            .catch(err=>console.log("ERRO: ",err))
+        })
+
+        bulbasaur.addEventListener("click", function(){
+            main.innerHTML = ""
+            fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+            .then(res => res.json())
+            .then(data => {
+                main.innerHTML += `<img src="${data.sprites.front_default}">`
+                main.innerHTML += `<p>Nome: ${data.name}</p>`
+                main.innerHTML += `<p>Altura: ${data.height}m</p>`
+                main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            })
+            .catch(err => console.log("ERRO: ", err))
+        })
+
+        snorlax.addEventListener("click", function(){
+            main.innerHTML = ""
+            fetch("https://pokeapi.co/api/v2/pokemon/snorlax")
+            .then(res => res.json())
+            .then(data => {
+                main.innerHTML += `<img src="${data.sprites.front_default}">`
+                main.innerHTML += `<p>Nome: ${data.name}</p>`
+                main.innerHTML += `<p>Altura: ${data.height}m</p>`
+                main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            })
+            .catch(err => console.log("ERRO: ", err))
+        })
+
     </script>
 </body>
 
