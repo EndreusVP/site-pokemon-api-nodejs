@@ -46,6 +46,7 @@ bulbasaur.addEventListener("click", function () {
             const imagemPokemon = document.querySelector(".imagem-pokemon")
             imagemPokemon.style = "width: 300px;"
             imagemPokemon.style = "height: 400px;" 
+            imagemPokemon.style = "position: relative;"
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
