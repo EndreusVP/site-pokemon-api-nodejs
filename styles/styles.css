@@ -36,3 +36,13 @@
      flex-direction: column;
      gap: 70px;
  }
+
+ button {
+    border-radius: 10px;
+    border: none;
+ }
+
+ button:hover{
+    cursor: pointer;
+    border:solid 1px red;
+ }
