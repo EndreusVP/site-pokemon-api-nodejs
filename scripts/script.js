@@ -1,3 +1,5 @@
+
+
 //botões
 const pikachu = document.querySelector("#pikachu")
 const charmander = document.querySelector("#charmander")
@@ -14,8 +16,11 @@ pikachu.addEventListener("click", function () {
         .then(data => {
             main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
             const imagemPokemon = document.querySelector(".imagem-pokemon")
-            imagemPokemon.style = "width: 300px;"
-            imagemPokemon.style = "height: 400px;" 
+            imagemPokemon.style.height = "400px"
+            imagemPokemon.style.width = "400px"
+            imagemPokemon.style.position = "relative"
+            imagemPokemon.style.zIndex = "11"
+            main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
         })
@@ -29,8 +34,11 @@ charmander.addEventListener("click", function () {
         .then(data => {
             main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
             const imagemPokemon = document.querySelector(".imagem-pokemon")
-            imagemPokemon.style = "width: 300px;"
-            imagemPokemon.style = "height: 400px;" 
+            imagemPokemon.style.height = "400px"
+            imagemPokemon.style.width = "400px"
+            imagemPokemon.style.position = "relative"
+            imagemPokemon.style.zIndex = "11" 
+            main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
         })
@@ -44,9 +52,10 @@ bulbasaur.addEventListener("click", function () {
         .then(data => {
             main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
             const imagemPokemon = document.querySelector(".imagem-pokemon")
-            imagemPokemon.style = "width: 300px;"
-            imagemPokemon.style = "height: 400px;" 
-            imagemPokemon.style = "position: relative;"
+            imagemPokemon.style.height = "400px"
+            imagemPokemon.style.width = "400px"
+            imagemPokemon.style.position = "relative"
+            imagemPokemon.style.zIndex = "11"
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
@@ -61,8 +70,10 @@ snorlax.addEventListener("click", function () {
         .then(data => {
             main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
             const imagemPokemon = document.querySelector(".imagem-pokemon")
-            imagemPokemon.style = "width: 300px;"
-            imagemPokemon.style = "height: 400px;" 
+            imagemPokemon.style.height = "400px"
+            imagemPokemon.style.width = "400px"
+            imagemPokemon.style.position = "relative"
+            imagemPokemon.style.zIndex = "11"
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
