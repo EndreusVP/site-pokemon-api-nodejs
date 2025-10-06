@@ -4,18 +4,14 @@
      box-sizing: border-box;
  }
 
+ body {
+     font-family: roboto;
+ }
+
  .container {
      display: flex;
      flex-direction: row;
      height: 100vh;
- }
-
- .overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.829), rgba(255, 0, 0, 0));
-    pointer-events: none;
  }
 
  .main {
@@ -27,6 +23,8 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
+     position: relative;
+     z-index: 1;
  }
 
  .selecionar {
@@ -34,17 +32,26 @@
      height: 100vh;
      display: flex;
      flex-direction: column;
-     gap: 70px;
+     gap: 200px;
      position: relative;
      z-index: 11;
-     background-color: rgba(0, 0, 0, 0.479);
+     background-color: rgb(0, 0, 0);
+     align-items: center;
  }
 
  button {
-    border-radius: 10px;
-    border: none;
+     border-radius: 10px;
+     border: none;
+     height: 50px;
+     width: 150px;
+     margin-top: 20px;
  }
 
- button:hover{
-    cursor: pointer;
+ button:hover {
+     cursor: pointer;
+ }
+
+ p {
+     font-size: 50px;
+     font-weight: 900;
  }

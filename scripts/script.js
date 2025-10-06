@@ -7,7 +7,7 @@ const bulbasaur = document.querySelector("#bulbasaur")
 const snorlax = document.querySelector("#snorlax")
 
 //variaveis
-let main = document.querySelector("#main")
+const main = document.querySelector("#main")
 
 pikachu.addEventListener("click", function () {
     main.innerHTML = ""
@@ -16,6 +16,7 @@ pikachu.addEventListener("click", function () {
         .then(data => {
             main.innerHTML += `<img class="imagem-pokemon" src="${data.sprites.front_default}">`
             const imagemPokemon = document.querySelector(".imagem-pokemon")
+
             imagemPokemon.style.height = "400px"
             imagemPokemon.style.width = "400px"
             imagemPokemon.style.position = "relative"
@@ -23,6 +24,16 @@ pikachu.addEventListener("click", function () {
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+
+            pikachu.style.backgroundColor = "yellow"
+            charmander.style.backgroundColor = "yellow"
+            bulbasaur.style.backgroundColor = "yellow"
+            snorlax.style.backgroundColor = "yellow"
+
+            pikachu.style.color = "black"
+            charmander.style.color = "black"
+            bulbasaur.style.color = "black"
+            snorlax.style.color = "black"
         })
         .catch(err => console.error("ERRO:", err))
 })
@@ -41,6 +52,15 @@ charmander.addEventListener("click", function () {
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            pikachu.style.backgroundColor = "orange"
+            charmander.style.backgroundColor = "orange"
+            bulbasaur.style.backgroundColor = "orange"
+            snorlax.style.backgroundColor = "orange"
+            pikachu.style.color = "black"
+            charmander.style.color = "black"
+            bulbasaur.style.color = "black"
+            snorlax.style.color = "black"
+
         })
         .catch(err => console.log("ERRO: ", err))
 })
@@ -59,6 +79,16 @@ bulbasaur.addEventListener("click", function () {
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            pikachu.style.backgroundColor = "green"
+            charmander.style.backgroundColor = "green"
+            bulbasaur.style.backgroundColor = "green"
+            snorlax.style.backgroundColor = "green"
+            pikachu.style.color = "white"
+            charmander.style.color = "white"
+            bulbasaur.style.color = "white"
+            snorlax.style.color = "white"
+
+
         })
         .catch(err => console.log("ERRO: ", err))
 })
@@ -77,6 +107,14 @@ snorlax.addEventListener("click", function () {
             main.innerHTML += `<p>Nome: ${data.name}</p>`
             main.innerHTML += `<p>Altura: ${data.height}m</p>`
             main.innerHTML += `<p>Peso: ${data.weight}kg</p>`
+            pikachu.style.backgroundColor = "rgb(49, 90, 123)"
+            charmander.style.backgroundColor = "rgb(49, 90, 123)"
+            bulbasaur.style.backgroundColor = "rgb(49, 90, 123)"
+            snorlax.style.backgroundColor = "rgb(49, 90, 123)"
+            pikachu.style.color = "white"
+            charmander.style.color = "white"
+            bulbasaur.style.color = "white"
+            snorlax.style.color = "white"
         })
         .catch(err => console.log("ERRO: ", err))
 })
